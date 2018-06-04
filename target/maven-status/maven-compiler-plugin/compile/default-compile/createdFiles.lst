@@ -1,0 +1,10 @@
+io/binbean/boot/jpa/boot/JpaComplexQueryRepositoriesAutoConfiguration.class
+io/binbean/boot/jpa/support/JpaComplexQueryRepository.class
+io/binbean/boot/jpa/SpecificationUtils$2.class
+io/binbean/boot/jpa/boot/ComplexQueryRepositoriesConfigureRegistrar$JpaComplexQueryRepositoriesConfiguration.class
+io/binbean/boot/jpa/SpecificationUtils$SearchFilter.class
+io/binbean/boot/jpa/boot/ComplexQueryRepositoriesConfigureRegistrar.class
+io/binbean/boot/jpa/SpecificationUtils$1.class
+io/binbean/boot/jpa/SpecificationUtils.class
+io/binbean/boot/jpa/SpecificationUtils$Operator.class
+io/binbean/boot/jpa/ComplexQueryRepository.class
