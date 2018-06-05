@@ -7,9 +7,32 @@
     <groupId>io.github.binbean</groupId>
     <artifactId>jpa-complex-query-boot-starter</artifactId>
     <version>0.1</version>
-
     <name>jpa-complex-query-boot-starter</name>
     <description>Jap complex query boot starter</description>
+
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>binbean</name>
+            <email>binbean1001@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/binbean/jpa-complex-query-boot-starter.git</connection>
+        <developerConnection>scm:git:https://github.com/binbean/jpa-complex-query-boot-starter.git</developerConnection>
+        <url>https://github.com/binbean/jpa-complex-query-boot-starter</url>
+        <tag>master</tag>
+    </scm>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -58,5 +81,17 @@
         </plugins>
         -->
     </build>
+
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>binbeanDeploymentRepo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>binbeanDeploymentRepo</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
 </project>
