@@ -35,6 +35,7 @@ public class SpecificationUtils {
      * @param searchParams 查询参数。
      *                     Map的key格式：操作符_属性名，比如：GT_age表示age大于指定值。如果嵌套的属性，则以“.”隔开，比如：GT_user.age表示以属性user的属性age大于指定值
      *                     Map的value格式：非IN操作符，就是指定的value；IN操作符，value必须得是数组或Collection类型
+     * @return Specification
      */
     public static <T> Specification<T> parse(Map<String, Object> searchParams) {
         return parse(SearchFilter.parse(searchParams));
@@ -44,6 +45,7 @@ public class SpecificationUtils {
      * 根据查询条件解析
      *
      * @param filters 查询条件
+     * @return Specification
      */
     public static <T> Specification<T> parse(final List<SearchFilter> filters) {
         return new Specification<T>() {
@@ -61,7 +63,14 @@ public class SpecificationUtils {
         };
     }
 
-    // 构建Predicate
+
+    /**
+     * 构建Predicate
+     * @param cb CriteriaBuilder
+     * @param path Path
+     * @param filter  SearchFilter
+     * @return Predicate
+     */
     private static Predicate buildPredicate(CriteriaBuilder cb, Path path, SearchFilter filter) {
         Predicate predicate;
         switch (filter.operator) {
@@ -84,7 +93,11 @@ public class SpecificationUtils {
                 predicate = cb.lessThanOrEqualTo(path, (Comparable) filter.value);
                 break;
             case LIKE:
-                predicate = cb.like(path, "%" + filter.value.toString() + "%");
+                //predicate = cb.like(path, "%" + filter.value.toString() + "%");
+                predicate = cb.like(path, "%" +filter.value.toString().trim()
+                        .replaceAll("/","//")
+                        .replaceAll("_","/_")
+                        .replaceAll("%","/%")+"%",'/');
                 break;
             case NULL:
                 predicate = cb.isNull(path);
@@ -108,7 +121,12 @@ public class SpecificationUtils {
         return predicate;
     }
 
-    // 根据属性名获取路径
+    /**
+     * 根据属性名获取路径
+     * @param root Root
+     * @param attrName 属性名称
+     * @return Path
+     */
     private static Path getPath(Root root, String attrName) {
         Path path = root;
         String[] attrs = StringUtils.split(attrName, String.valueOf(NESTED_ATTRNAME_SEPARATOR));
@@ -122,11 +140,11 @@ public class SpecificationUtils {
         return path;
     }
 
-
     /**
-     * 取得带相同前缀的Request Parameters.
-     *
-     * 返回的结果的Parameter名已去除前缀.
+     *  取得带相同前缀的Request Parameters.返回的结果的Parameter名已去除前缀.
+     * @param request ServletRequest
+     * @param prefix 前缀
+     * @return Map
      */
     public static Map<String, Object> getParametersWithPrefix(ServletRequest request, String prefix) {
         Assert.notNull(request, "Request must not be null");
@@ -152,6 +170,11 @@ public class SpecificationUtils {
         return params;
     }
 
+    /**
+     *
+     * @param request ServletRequest
+     * @return Map
+     */
     public static Map<String, Object> getParametersWithPrefix(ServletRequest request) {
         return getParametersWithPrefix(request, SEARCH_FILTER_PREFIX + "_");
     }
@@ -192,6 +215,7 @@ public class SpecificationUtils {
          * 解析
          *
          * @param searchParams 需被解析的查询参数
+         * @return  List
          */
         public static List<SearchFilter> parse(Map<String, Object> searchParams) {
             List<SearchFilter> filters = new ArrayList<>();

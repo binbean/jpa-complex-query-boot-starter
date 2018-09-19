@@ -10,8 +10,9 @@ import java.lang.annotation.Annotation;
 
 /**
  * jpa-repository配置类（设置repository实现基础类）
- * <p>参考{@link org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfigureRegistrar}</p>
+ *
  */
+//<p>参考{@link org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfigureRegistrar}</p>
 public class ComplexQueryRepositoriesConfigureRegistrar extends AbstractRepositoryConfigurationSourceSupport {
     @Override
     protected Class<? extends Annotation> getAnnotation() {

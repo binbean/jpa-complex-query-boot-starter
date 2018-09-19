@@ -25,6 +25,7 @@ public interface ComplexQueryRepository<T, ID extends Serializable> extends JpaR
      *
      * @param searchParams 条件参数
      * @param pageable     分页信息
+     * @return Page
      */
     Page<T> query(Map<String, Object> searchParams, Pageable pageable);
 
@@ -32,6 +33,7 @@ public interface ComplexQueryRepository<T, ID extends Serializable> extends JpaR
      * 查询
      *
      * @param searchParams 条件参数
+     * @return List
      */
     List<T> query(Map<String, Object> searchParams);
 
@@ -40,6 +42,7 @@ public interface ComplexQueryRepository<T, ID extends Serializable> extends JpaR
      *
      * @param searchParams 条件参数
      * @param sort         排序
+     * @return List
      */
     List<T> query(Map<String, Object> searchParams, Sort sort);
 
@@ -47,6 +50,7 @@ public interface ComplexQueryRepository<T, ID extends Serializable> extends JpaR
      * 统计
      *
      * @param searchParams 条件参数
+     * @return long
      */
     long count(Map<String, Object> searchParams);
 }
