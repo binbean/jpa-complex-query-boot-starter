@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fce3a151-495f-4224-892a-3ed31b4a011f" name="Default" comment="修改pom信息，添加中央仓库发布相关信息">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-complex-query-boot-starter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fce3a151-495f-4224-892a-3ed31b4a011f" name="Default" comment="修改like查询问题，例如：%,_">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa-complex-query-boot-starter.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/binbean/boot/jpa/ComplexQueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/binbean/boot/jpa/ComplexQueryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/binbean/boot/jpa/SpecificationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/binbean/boot/jpa/SpecificationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/binbean/boot/jpa/boot/ComplexQueryRepositoriesConfigureRegistrar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/binbean/boot/jpa/boot/ComplexQueryRepositoriesConfigureRegistrar.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,12 +44,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="56" />
+          <entry key="txt" value="27" />
           <entry key="xml" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="56" />
+          <entry key="PLAIN_TEXT" value="27" />
           <entry key="XML" value="31" />
         </counts>
       </usages-collector>
@@ -311,7 +306,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537327950778" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537328332740" />
     <property name="configurable.Global.libraries.is.expanded" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -400,7 +395,7 @@
       <workItem from="1533461053660" duration="510000" />
       <workItem from="1537320237815" duration="649000" />
       <workItem from="1537324711753" duration="13000" />
-      <workItem from="1537324767827" duration="2896000" />
+      <workItem from="1537324767827" duration="3627000" />
     </task>
     <task id="LOCAL-00001" summary=" 修改groupid">
       <created>1528112535130</created>
@@ -416,15 +411,21 @@
       <option name="project" value="LOCAL" />
       <updated>1528162719642</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="修改like查询问题，例如：%,_">
+      <created>1537328124689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537328124689</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23464000" />
+    <option name="totallyTimeSpent" value="24195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3085622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -467,7 +468,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" 修改groupid" />
     <MESSAGE value="修改pom信息，添加中央仓库发布相关信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改pom信息，添加中央仓库发布相关信息" />
+    <MESSAGE value="修改like查询问题，例如：%,_" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改like查询问题，例如：%,_" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-jdbc/1.5.13.RELEASE/spring-boot-starter-jdbc-1.5.13.RELEASE.pom">
